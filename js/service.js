@@ -30,3 +30,13 @@ angular.module("todoAPIService",[])
         };
         return todoAPIService;
     });
+
+angular.module("LoginService",[])
+.factory("LoginService", function($http){
+    LoginService = {
+        login: function(url, data) {
+            return $http.post(url,data);
+        }
+    };
+    return LoginService;
+});
